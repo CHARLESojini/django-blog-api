@@ -1,4 +1,9 @@
 # Django Blog API
+## Live Demo
+
+- **API Base URL:** https://django-blog-api-0q1s.onrender.com/api/
+- **Swagger Documentation:** https://django-blog-api-0q1s.onrender.com/swagger/
+- **ReDoc:** https://django-blog-api-0q1s.onrender.com/redoc/
 
 A RESTful Blog Application API built with Django REST Framework and PostgreSQL.
 
