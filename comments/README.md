@@ -75,6 +75,26 @@ A RESTful Blog Application API built with Django REST Framework and PostgreSQL.
 ```bash
    python manage.py runserver
 ```
+## Docker Setup (Alternative)
+
+1. Make sure Docker is installed and running
+
+2. Build and start containers:
+```bash
+   docker-compose up --build
+```
+
+3. Run migrations (in a new terminal):
+```bash
+   docker-compose exec web python manage.py migrate
+```
+
+4. Access the API at `http://localhost:8000`
+
+5. Stop containers:
+```bash
+   docker-compose down
+```
 
 ## API Endpoints
 
