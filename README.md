@@ -65,6 +65,29 @@ A RESTful Blog Application API built with Django REST Framework and PostgreSQL.
 - Paginated responses
 - Swagger API documentation
 
+## Testing with Swagger UI
+
+1. Go to the [Swagger Documentation](https://django-blog-api-0q1s.onrender.com/swagger/)
+
+2. **Register a user:**
+   - Find `POST /api/users/register/`
+   - Click **Try it out**
+   - Enter your details and click **Execute**
+
+3. **Login to get token:**
+   - Find `POST /api/users/login/`
+   - Click **Try it out**
+   - Enter username and password
+   - Click **Execute**
+   - Copy the `access` token from the response
+
+4. **Authorize Swagger:**
+   - Click the **Authorize** button (🔓) at the top
+   - Enter: `Bearer <your_access_token>`
+   - Click **Authorize** → **Close**
+
+5. **Now you can test protected endpoints** like creating posts, liking, and commenting
+
 ## Tech Stack
 
 - Python 3.13
