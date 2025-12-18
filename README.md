@@ -5,6 +5,53 @@
 - **Swagger Documentation:** https://django-blog-api-0q1s.onrender.com/swagger/
 - **ReDoc:** https://django-blog-api-0q1s.onrender.com/redoc/
 - **Posts Endpoint:** https://django-blog-api-0q1s.onrender.com/api/posts/
+## Authentication
+
+This API uses JWT (JSON Web Token) authentication.
+
+### How to Authenticate:
+
+1. **Register** a new user:
+```bash
+   POST /api/users/register/
+   {
+     "username": "yourname",
+     "email": "your@email.com",
+     "password": "yourpassword",
+     "password_confirm": "yourpassword"
+   }
+```
+
+2. **Login** to get tokens:
+```bash
+   POST /api/users/login/
+   {
+     "username": "yourname",
+     "password": "yourpassword"
+   }
+```
+   Response:
+```json
+   {
+     "access": "eyJhbGciOiJIUzI1NiIs...",
+     "refresh": "eyJhbGciOiJIUzI1NiIs..."
+   }
+```
+
+3. **Use the access token** in protected requests:
+```
+   Authorization: Bearer <your_access_token>
+```
+
+### Protected Endpoints (Require Authentication):
+- Create, update, delete posts
+- Like/unlike posts
+- Create, update, delete comments
+
+### Public Endpoints (No Authentication):
+- View all posts
+- View single post
+- View comments
 
 A RESTful Blog Application API built with Django REST Framework and PostgreSQL.
 
